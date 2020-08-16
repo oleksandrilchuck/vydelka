@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,423;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,423;1,500;1,600;1,700&display=swap');
+
+:root {
+    --accent-color: #155fd6;
+    --main-color: black;
+    font-family: 'Cabin', sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    max-width: 980px;
+    margin: auto;
+}
+
+header nav .logo {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 3rem;
+    text-align: center;
+    color: var(--accent-color);
+    margin-top: 10px;
+}
+header nav .menu {
+    display: flex;
+    justify-content: space-around;
+    padding: 0;
+    list-style-type: none;
+}
+header nav .menu a {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: var(--main-color);
+    border: 1px solid transparent;
+    padding: 5px;
+}
+header nav .menu a:hover {
+    border: 1px solid var(--accent-color);
+}
+@media (min-width: 550px) {
+    header nav {
+        display: flex;
+        align-items: center;
+    }
+    header nav .menu {
+        flex: 1;
+    }
+}
+header .banner {
+    background-image: url(../img/car.jpg);
+    background-size: cover;
+    background-position: center;
+    min-height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+header .banner h1 {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 3rem;
+    color: var(--accent-color);
+}
+article.product img {
+    display: block;
+    width: 100%;
+}
+article.product .product-buttons {
+    display: flex;
+    justify-content: space-around;
+}
+@media (min-width: 640px) {
+    .product-list {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 5px;
+    }
+}
+@media (min-width: 960px) {
+    .product-list {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+@media (min-width: 980px) {
+    .product-list {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+}
+.button {
+    display: inline-block;
+    padding: 0.35em 1.2em;
+    border: 0.1 em solid #ffffff;
+    margin: 0 0.3em 0.3em 0;
+    border-radius: 0.12em;
+    text-decoration: none;
+    font-weight: 300;
+    color: #ffffff;
+    text-align: center;
+    transition: all 0.2s;
+    background-color: transparent;
+}
+.button:hover {
+    color: #000000;
+    background-color: #ffffff;
+    cursor: pointer;
+}
+.card-button {
+    border-color: black;
+    color: black; 
+}
+.card-button:hover {
+    background-color: black;
+    color: white;
+}
+@media all and (max-width:30em) {
+    .button {
+        margin: 0.4em auto;
+    }
+}
